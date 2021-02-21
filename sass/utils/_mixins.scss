@@ -23,3 +23,23 @@
     width: $w*1px;
     height: $h*1px;
 }
+
+@mixin flex($prop, $d: flex, $jc: flex-start, $ai: flex-start, $fd: row) {
+    #{$prop}: $d;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+  }
+
+  
+  @mixin icon-list($list, $selector){
+    #{$selector} {
+        @each $name, $path in $list {
+          &-#{$name}::before {
+            background-image: $path;
+            background-size: 70px 70px;
+            }
+         }
+      }
+    }
+   

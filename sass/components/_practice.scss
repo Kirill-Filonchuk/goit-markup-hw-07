@@ -3,8 +3,9 @@
   }
   
   .practice-list {
-    display: flex;
-    flex-wrap: wrap;
+    @extend %df_fw;
+    // display: flex;
+    // flex-wrap: wrap;
   
     margin-top: calc(-1 * var(--card-set-gap));
     margin-left: calc(-1 * var(--card-set-gap));
@@ -12,8 +13,9 @@
   
   .practice-title {
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.167;
+    @include line-height-calc(36,42);
+    // font-size: 36px;
+    // line-height: 1.167;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--second-text-color);
@@ -44,8 +46,9 @@
     bottom: 0;
   
     font-weight: 700;
-    font-size: 14px;
-    line-height: 1.143;
+    @include line-height-calc(14,16);
+    // font-size: 14px;
+    // line-height: 1.143;
     text-align: center;
     letter-spacing: 0.03em;
     text-transform: uppercase;

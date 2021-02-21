@@ -1,6 +1,13 @@
+
+// @import "../utils/mixins";
+
 .address-list {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
+
+    
+      @include flex($prop: display, $fd: column);
+      
 
     .items:not(:last-child) {
       margin-bottom: 9px;

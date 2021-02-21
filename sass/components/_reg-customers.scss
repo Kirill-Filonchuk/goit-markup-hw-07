@@ -1,35 +1,39 @@
 .customers {
     padding-top: 94px;
     padding-bottom: 94px;
-  }
   
-  .customers .title {
-    font-weight: 700;
-
-    @include line-height-calc(36, 42);
+    .title {
+      font-weight: 700;
+  
+      @include line-height-calc(36, 42);
+      
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: var(--second-text-color);
     
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--second-text-color);
+      margin-bottom: 50px;
+    }
   
-    margin-bottom: 50px;
   }
+  
   
   .customers-order {
     display: flex;
     flex-wrap: wrap;
     margin-right: calc(-1 * var(--card-set-gap));
     margin-bottom: calc(-1 * var(--card-set-gap));
+
+    &-item {
+      width: 170px;
+      height: 90px;
+      margin-right: var(--card-set-gap);
+      margin-bottom: var(--card-set-gap);
+    
+      flex-basis: calc(100% / 6 - var(--card-set-gap));
+    }
+
   }
-  
-  .customers-order-item {
-    width: 170px;
-    height: 90px;
-    margin-right: var(--card-set-gap);
-    margin-bottom: var(--card-set-gap);
-  
-    flex-basis: calc(100% / 6 - var(--card-set-gap));
-  }
+ 
   
   .customer-order-link {
     @include d_flex(center);
