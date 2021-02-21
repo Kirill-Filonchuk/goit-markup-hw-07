@@ -5,8 +5,9 @@
   
   .customers .title {
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1, 167;
+
+    @include line-height-calc(36, 42);
+    
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--second-text-color);
@@ -31,8 +32,7 @@
   }
   
   .customer-order-link {
-    display: flex;
-    justify-content: center;
+    @include d_flex(center);
     align-items: center;
   
     border: 1px solid var(--social-fill-color);
@@ -43,15 +43,18 @@
   
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+      
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+  
+    color: var(--accent-color);
+  }
   }
   
   .customer-icon {
     fill: currentColor;
   }
   
-  .customer-order-link:hover,
-  .customer-order-link:focus {
-    border-color: var(--accent-color);
-  
-    color: var(--accent-color);
-  }
